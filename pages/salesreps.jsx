@@ -21,7 +21,7 @@ export default function SalesReps() {
             >
               <Heading> Our sales team is here to assist you.</Heading>
               <Text marginTop={"10px"}>
-                Carvana boasts experienced sales reprentatives that are here to
+                Cardesi boasts experienced sales reprentatives that are here to
                 help you in making the right decision. Feel free to reach out to
                 any of our sales representatives below.
               </Text>
@@ -41,7 +41,7 @@ export default function SalesReps() {
           image="./CoreyStokes.png"
           role="Sales Representative"
           name={"Corey Stokes"}
-          email="CoreyStokes@caravan.com"
+          email="CoreyStokes@Cardesi.com"
           description={
             "Corey Stokes is a sales reprentative at Carvana. He has been with us since the start & can help you find your next car."
           }
@@ -50,7 +50,7 @@ export default function SalesReps() {
           image="./LuisHarrison.png"
           role="Sales Representative"
           name={"Luis Harrison"}
-          email="LuisHarrison@caravan.com"
+          email="LuisHarrison@Cardesi.com"
           description={
             "Luis Harrison is an experienced sales representative who can help you find the right car for you."
           }
@@ -59,16 +59,16 @@ export default function SalesReps() {
           image="./JerryMcguire.png"
           role="Senior Sales Representative"
           name={"Jerry Mcguire"}
-          email="JerryMcguire@caravan.com"
+          email="JerryMcguire@Cardesi.com"
           description={
-            "Jerry Mcguire is a senior sales rep. at Caravan. He can help you find the right deals that fit your budget."
+            "Jerry Mcguire is a senior sales rep. at Cardesi. He can help you find the right deals that fit your budget."
           }
         />
         <RepCard
           image="./MicheleShelley.png"
           role="Senior Sales Representative"
           name={"Michele Shelley"}
-          email="MicheleShelley@caravan.com"
+          email="MicheleShelley@Cardesi.com"
           description={
             "Michele Shelley is a skilled sales reprentative who can help you find a comfortable car."
           }

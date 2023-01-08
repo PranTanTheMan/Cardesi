@@ -53,9 +53,9 @@ export default function Home() {
           color={"textColor"}
           mb="3rem"
         >
-          <Heading fontSize={"3xl"}>Why should you choose Caravan?</Heading>
+          <Heading fontSize={"3xl"}>Why should you choose Cardesi?</Heading>
           <Text py={"15px"}>
-            Choose Caravan for your next purchase because we are the best in the
+            Choose Cardesi for your next purchase because we are the best in the
             business. We have the best deals on the market and we are here to
             help you find your next dream car. We are a team of passionate
             individuals who will help you find your next dream car.
@@ -77,10 +77,10 @@ export default function Home() {
           mb="3rem"
         >
           <Heading fontSize={"3xl"}>
-            How does Caravan make prices affordable?
+            How does Cardesi make prices affordable?
           </Heading>
           <Text py={"15px"}>
-            Caravan makes prices affordable because we only buy used cars for
+            Cardesi makes prices affordable because we only buy used cars for
             the right price. We don&apos;t buy cars that are overpriced and we
             don&apos;t sell cars that are overpriced. We are here to help you
             find your next dream car.
@@ -105,7 +105,7 @@ export default function Home() {
             Why can your team help me find the right car?
           </Heading>
           <Text py={"15px"}>
-            Caravan&apos;s team can help you find the right car because we are a
+            Cardesi&apos;s team can help you find the right car because we are a
             team of passionate people who love cars. We want you to have the
             best car you&apos;ve ever had
           </Text>

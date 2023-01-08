@@ -65,7 +65,7 @@ export default function Contact() {
             maxWidth="501px"
           >
             <Heading fontSize={"4xl"} mb={"30px"}>
-              Contact Carvana
+              Contact Cardesi
             </Heading>
             <FormControl height="full">
               <Input

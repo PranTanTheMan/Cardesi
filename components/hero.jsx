@@ -26,7 +26,7 @@ export default function hero() {
             pt={"50px"}
             maxWidth={"700px"}
           >
-            Caravan strives to help you find the best deals on the market. We
+            Cardesi strives to help you find the best deals on the market. We
             are a team of passionate individuals who will help you find your
             next dream car.
           </Text>

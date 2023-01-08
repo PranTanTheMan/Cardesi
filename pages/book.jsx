@@ -50,7 +50,7 @@ export default function Book() {
           color={"primary"}
           margin="auto"
         >
-          Book an Appointment with a Sales Representative at Caravan today!
+          Book an Appointment with a Sales Representative at Cardesi today!
         </Heading>
         <Flex
           borderRadius={"20px"}

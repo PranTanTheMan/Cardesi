@@ -48,10 +48,10 @@ export default function Navbar() {
               display="flex"
               alignItems="center"
             >
-              <VisuallyHidden>Caravan.</VisuallyHidden>
+              <VisuallyHidden>Cardesi.</VisuallyHidden>
             </chakra.a>
             <chakra.h1 color={text} fontSize="xl" fontWeight="medium" ml="5rem">
-              Caravan.
+              Cardesi
             </chakra.h1>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
