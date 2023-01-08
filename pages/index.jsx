@@ -4,9 +4,6 @@ import Footer from "../components/footer";
 import {
   Heading,
   Text,
-  Button,
-  Center,
-  Divider,
   Box,
   Flex,
   chakra,
