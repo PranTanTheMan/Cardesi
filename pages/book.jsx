@@ -23,24 +23,30 @@ export default function Book() {
     onOpen,
   } = useDisclosure({ defaultIsOpen: false });
   return BookSuccess ? (
-    <Alert
-      borderRadius={"10px"} // can u hear me nnnjknm njkml bruh
-      margin="10rem auto"
-      status="success"
-      width={"500px"}
-    >
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <AlertIcon />
+    <>
+      <Box h={"50vh"}>
+        <Alert
+          borderRadius={"10px"}
+          margin="10rem auto"
+          status="success"
+          width={"350px"}
+          height={"150px"}
+        >
+          <Flex justifyContent={"center"} alignItems={"center"}>
+            <AlertIcon />
 
-        <Box>
-          <AlertTitle color={"black"}>Success!</AlertTitle>
-          <AlertDescription color={"black"}>
-            Thank you for booking the appointment. We look forward to seeing
-            you.
-          </AlertDescription>
-        </Box>
-      </Flex>
-    </Alert>
+            <Box>
+              <AlertTitle color={"black"}>Success!</AlertTitle>
+              <AlertDescription color={"black"}>
+                Thank you for booking the appointment. We look forward to seeing
+                you.
+              </AlertDescription>
+            </Box>
+          </Flex>
+        </Alert>
+      </Box>
+      <Footer />
+    </>
   ) : (
     <>
       <Flex marginY={"160px"} direction={"column"}>
@@ -62,9 +68,9 @@ export default function Book() {
           bg="#2c5382"
         >
           <Input
-          color={"white !important"}
+            color={"white !important"}
             margin="auto"
-          border="none"
+            border="none"
             placeholder="Select Date and Time"
             size="lg"
             type="datetime-local"

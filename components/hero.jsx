@@ -10,7 +10,7 @@ export default function hero() {
         <Center marginX="2rem" flexDirection={"column"} alignItems="center">
           <Heading
             fontWeight={"700"}
-            fontSize={"72px"}
+            fontSize={{ base: "40px", md: "72px" }}
             className="hero-tagline"
             color="textColor"
             maxWidth={"900px"}

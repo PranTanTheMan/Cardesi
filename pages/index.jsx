@@ -27,12 +27,16 @@ export default function Home() {
         src="//code.tidio.co/ew045s7f91tlkp4hws9xam6fmbbzw1eb.js"
         async
       ></script>
+      {/* HERO */}
       <Hero />
+      {/*  */}
       <Flex
         mb={"3.5rem !important;"}
         justifyContent="center"
-        flexDirection={"column"}
+        flexDirection={"row"}
         alignItems="center"
+        gap={"1rem"}
+        flexWrap={"wrap"}
       >
         <Text id={"features"}></Text>
         <br />
@@ -41,7 +45,7 @@ export default function Home() {
         <Box
           bg="blue.200"
           padding="1rem"
-          maxWidth="400px"
+          maxWidth="370px"
           className={"why"}
           borderRadius={"20px"}
           boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.2)"}
@@ -64,7 +68,7 @@ export default function Home() {
         <Box
           bg="blue.700"
           padding="1rem"
-          maxWidth="400px"
+          maxWidth="370px"
           className={"why"}
           borderRadius={"20px"}
           boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.2)"}
@@ -89,7 +93,7 @@ export default function Home() {
         <Box
           bg="blue.200"
           padding="1rem"
-          maxWidth="400px"
+          maxWidth="370px"
           className={"why"}
           borderRadius={"20px"}
           boxShadow={"0px 0px 10px 0px rgba(0,0,0,0.2)"}

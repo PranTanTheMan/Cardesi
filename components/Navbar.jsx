@@ -42,17 +42,19 @@ export default function Navbar() {
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
-            <chakra.a
-              href="/"
-              title="Choc Home Page"
-              display="flex"
-              alignItems="center"
-            >
+            <chakra.a href="/" title="Home" display="flex" alignItems="center">
               <VisuallyHidden>Cardesi.</VisuallyHidden>
             </chakra.a>
-            <chakra.h1 color={text} fontSize="xl" fontWeight="medium" ml="5rem">
-              Cardesi
-            </chakra.h1>
+            <chakra.a href="/" title="Home" display="flex" alignItems="center">
+              <chakra.h1
+                color={text}
+                fontSize="xl"
+                fontWeight="medium"
+                ml={{ base: "0.8rem", md: "5rem" }}
+              >
+                Cardesi
+              </chakra.h1>
+            </chakra.a>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack

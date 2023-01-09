@@ -21,7 +21,7 @@ export default function Browse() {
       <Flex>
         <Box w="100%" bg="tomato">
           <Flex direction={["column", "row"]}>
-            <Image height="100" width="500" src="/used-car.jpg" />
+            <Image alt="bmw" height="100" width="500" src="/used-car.jpg" />
             <Flex
               maxWidth="500px  "
               margin="auto"

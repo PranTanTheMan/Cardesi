@@ -15,10 +15,9 @@ import {
   AlertTitle,
   AlertDescription,
   isLoading,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import { BsArrowRight } from "react-icons/bs";
-
 
 export default function Contact() {
   const coolor = useColorModeValue("#6db8ba", "white");
@@ -29,28 +28,29 @@ export default function Contact() {
     onOpen,
   } = useDisclosure({ defaultIsOpen: false });
   return ContactSuccess ? (
-    <Alert
-      borderRadius={"10px"}
-      margin="10rem auto"
-      status="success"
-      width={"400px"}
-    >
-      <Flex justifyContent={"center"} alignItems={"center"}>
-        <AlertIcon />
-        
-        <Box>
-         <AlertTitle color={"black"}>Success!</AlertTitle>
-          <AlertDescription color={"black"}>
-            Your message has been received. We will review your message
-            and respond within the next 48 hours!
-          </AlertDescription>
-        </Box>
-      </Flex>
-    </Alert>
+    <Box h={"50vh"}>
+      <Alert
+        borderRadius={"10px"}
+        margin="10rem auto"
+        status="success"
+        width={"400px"}
+      >
+        <Flex justifyContent={"center"} alignItems={"center"}>
+          <AlertIcon />
+
+          <Box>
+            <AlertTitle color={"black"}>Success!</AlertTitle>
+            <AlertDescription color={"black"}>
+              Your message has been received. We will review your message and
+              respond within the next 48 hours!
+            </AlertDescription>
+          </Box>
+        </Flex>
+      </Alert>
+    </Box>
   ) : (
     <>
-      
-      <Flex  margin={"2rem 2rem"} justifyContent={"center"} color={coolor}>
+      <Flex margin={"2rem 2rem"} justifyContent={"center"} color={coolor}>
         <Flex
           direction={["column", "row"]}
           marginTop="50px"
