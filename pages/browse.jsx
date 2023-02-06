@@ -1,23 +1,25 @@
 import Head from "next/head";
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import CarCard from "../components/car-card";
 import Footer from "../components/footer";
-
+import { BiChevronDownCircle } from "react-icons/bi";
 import {
   Wrap,
-  Input,
   Text,
   Flex,
   Box,
-  Badge,
   Heading,
-  Grid,
+  chakra,
+  Select,
+  Input,
 } from "@chakra-ui/react";
 
 export default function Browse() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchMake, setSearchMake] = useState("");
+  const [searchYear, setSearchYear] = useState("");
+  const [searchCondition, setSearchCondition] = useState("");
+  const [searchName, setSearchName] = useState("");
   const [filteredCards, setFilteredCards] = useState([]);
 
   const cards = useMemo(
@@ -144,7 +146,7 @@ export default function Browse() {
         miles: "25,000",
       },
       {
-        make: "ford",
+        make: "Ford",
         name: "Ford F-150",
         smallDescription:
           "Ford is a pickup truck with a spacious interior, and off-road capability. It has a 25MPG city and 32MPG highway.",
@@ -235,11 +237,17 @@ export default function Browse() {
 
   useEffect(() => {
     setFilteredCards(
-      cards.filter((card) =>
-        card.tag.tolowerCase().includes(searchQuery.toLowerCase())
+      cards.filter(
+        (card) =>
+          card.make.toLowerCase().includes(searchMake.toLowerCase()) &&
+          card.name.toLowerCase().includes(searchName.toLowerCase()) &&
+          card.condition
+            .toLowerCase()
+            .includes(searchCondition.toLowerCase()) &&
+          card.year.toLowerCase().includes(searchYear.toLowerCase())
       )
     );
-  }, [searchQuery, cards]);
+  }, [searchMake, cards, searchName, searchCondition, searchYear]);
   return (
     <>
       <Flex>
@@ -265,19 +273,114 @@ export default function Browse() {
         </Box>
       </Flex>
       <Flex px="2rem" direction={"column"} mt={"40px"} mb={"20px"}>
-        <Heading pb="10px" color={"#5ab9b8"} margin="auto">
+        <Heading fontSize={"6xl"} pb="10px" color={"#5ab9b8"} margin="auto">
           Browse our inventory
         </Heading>
 
-        <Text color={"#5ab9b8"} margin="auto">
+        <Text
+          fontSize={"xl"}
+          fontWeight={"400"}
+          color={"#5ab9b8"}
+          margin="auto"
+        >
           Explore a variety of cars with great value while also achieving
           pristine car condition.{" "}
         </Text>
       </Flex>
+      <chakra.form
+        mt={"30px"}
+        mb={"35px"}
+        display={"flex"}
+        gap={"20px"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection={["column", "row"]}
+      >
+        <Select
+          value={searchMake}
+          onChange={(e) => setSearchMake(e.target.value)}
+          width="150px"
+          bgColor={"#5ab9b8"}
+          color={"black"}
+          placeholder="Make"
+        >
+          <option value="ford">Ford</option>
+          <option value="honda">Honda</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="subaru">Subaru</option>
+          <option value="dodge">Dodge</option>
+          <option value="kia">Kia</option>
+          <option value="hyundai">Hyundai</option>
+        </Select>
+        {/*  */}
+        <Input
+          outline={"2px solid #5ab"}
+          value={searchName}
+          onChange={(e) => setSearchName(e.target.value)}
+          width={"300px"}
+          type="text"
+          color={"black"}
+          placeholder="Search..."
+          className="search-input"
+        />
+        {/*  */}
+        <Select
+          value={searchYear}
+          onChange={(e) => setSearchYear(e.target.value)}
+          width="150px"
+          bgColor={"#5ab9b8"}
+          color={"black"}
+          placeholder="Year"
+        >
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+        </Select>
 
-      <Wrap className="cars-container" spacing="40px" placeContent={"center"}>
-        <CarCard />
-      </Wrap>
+        <Select
+          value={searchCondition}
+          onChange={(e) => setSearchCondition(e.target.value)}
+          width="150px"
+          bgColor={"#5ab9b8"}
+          color={"black"}
+          placeholder="Condition"
+        >
+          <option value="mint">Mint</option>
+          <option value="excelllent">Excelllent</option>
+          <option value="food">Good</option>
+          <option value="fair">Fair</option>
+        </Select>
+      </chakra.form>
+
+      <Flex
+        className="cars-container"
+        spacing="40px"
+        placeContent={"center"}
+        justifyContent={"center"}
+        wrap={"wrap"}
+      >
+        {filteredCards.map((card) => (
+          <CarCard
+            key={card.name}
+            make={card.make}
+            name={card.name}
+            smallDescription={card.smallDescription}
+            bigDescription={card.bigDescription}
+            condition={card.condition}
+            year={card.year}
+            image={card.image}
+            price={card.price}
+            miles={card.miles}
+          />
+        ))}
+      </Flex>
       <Footer></Footer>
     </>
   );

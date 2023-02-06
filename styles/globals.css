@@ -26,9 +26,9 @@ body {
 .nav-logo {
   font-family: "Source Code Pro", monospace !important;
 }
-.cars-container {
+/* .cars-container {
   padding: 30px 10% 0px 15%;
-}
+} */
 
 .nav-bar-container {
   padding: 30px 13% 0px 13%;
@@ -147,4 +147,8 @@ body {
     right: auto;
     width: 100%;
   }
+}
+
+.search-input::placeholder {
+  color: black;
 }
