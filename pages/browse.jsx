@@ -353,7 +353,7 @@ export default function Browse() {
           placeholder="Condition"
         >
           <option value="mint">Mint</option>
-          <option value="excelllent">Excelllent</option>
+          <option value="excellent">Excellent</option>
           <option value="food">Good</option>
           <option value="fair">Fair</option>
         </Select>

@@ -53,6 +53,36 @@ body {
   flex-direction: column;
 }
 
+.contact-container {
+  min-height: 80vh !important;
+  padding-top: 60px;
+  flex-direction: column;
+}
+
+.contact-tagline {
+  color: rgb(165, 215, 215);
+}
+
+.contact-image {
+  background-image: url("/buildings.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh;
+  position: relative;
+  /* filter: blur(2px); */
+}
+
+.contact-image2 {
+  background-image: url("/buildings.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  /* filter: blur(2px); */
+}
+
 /* Make hero-container mobile responsive for iphone */
 @media screen and (max-width: 500px) {
   .hero-container {
@@ -69,9 +99,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
   height: 100vh;
-
   position: relative;
 }
 
@@ -152,3 +180,13 @@ body {
 .search-input::placeholder {
   color: black;
 }
+
+/*  
+
+
+
+
+
+
+
+*/
