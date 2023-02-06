@@ -36,16 +36,27 @@ export default function CarCard({
         margin="2rem"
         width="300px"
         padding={"1.5rem"}
-        backgroundColor={"blue.800"}
+        backgroundColor={"blue.900"}
         transition={"all 0.3s ease-in-out"}
         _hover={{
-          boxShadow: "20px 20px 90px rgba(33,33,33,.2)",
+          boxShadow: "15px 10px 33px rgba(33,33,33,.2)",
         }}
       >
-        <Badge px={"12px"} borderRadius={"full"} colorScheme={"teal"}>
+        <Badge
+          px={"12px"}
+          borderRadius={"full"}
+          colorScheme={"teal"}
+          variant={"subtle"}
+        >
           {make}
         </Badge>
-        <Badge mx="12px" px={"12px"} borderRadius={"full"} colorScheme={"teal"}>
+        <Badge
+          variant={"subtle"}
+          mx="12px"
+          px={"12px"}
+          borderRadius={"full"}
+          colorScheme={"teal"}
+        >
           Year: {year}
         </Badge>
         <Heading fontSize={"3xl"} marginBottom={"10px"} marginTop={"5px"}>
@@ -81,21 +92,21 @@ export default function CarCard({
           <hr></hr>
 
           <ModalBody marginTop={"10px"}>
-            <Text color={"blackAlpha.800"} mb="1rem">
+            <Text color={"white"} mb="1rem">
               {bigDescription}
             </Text>
             <hr></hr>
             <br />
-            <Text color={"blackAlpha.800"}>
+            <Text color={"white"}>
               <b>Year:</b> {year}
             </Text>
-            <Text color={"blackAlpha.800"}>
+            <Text color={"white"}>
               <b>Condition:</b> {condition}
             </Text>
-            <Text color={"blackAlpha.800"}>
+            <Text color={"white"}>
               <b>Miles</b> {miles}
             </Text>
-            <Text marginBottom={"10px"} color={"blackAlpha.800"}>
+            <Text marginBottom={"10px"} color={"white"}>
               <b>Price:</b> ${price}
             </Text>
 

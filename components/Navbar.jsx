@@ -64,7 +64,7 @@ export default function Navbar() {
               <Button
                 className="underline"
                 color={"black"}
-                variant="ghost"
+                variant="unstyled"
                 fontSize={"18px"}
                 px={"0"}
                 mr={{ base: "0.8rem", md: "1.5rem" }}
