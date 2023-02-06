@@ -10,7 +10,12 @@ export default function SalesReps() {
       <Flex>
         <Box w="100%" bg="tomato">
           <Flex direction={["column", "row"]}>
-            <Image height="100" width="500" src="/salesrepsbanner.jpg" />
+            <Image
+              alt="salesrepbanner"
+              height="100"
+              width="500"
+              src="/salesrepsbanner.jpg"
+            />
             <Flex
               maxWidth="500px  "
               margin="auto"

@@ -13,9 +13,8 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Image
+  Image,
 } from "@chakra-ui/react";
-
 
 export default function CarCard({
   name,
@@ -43,16 +42,21 @@ export default function CarCard({
           boxShadow: "20px 20px 90px rgba(33,33,33,.2)",
         }}
       >
-        <Badge px={"12px"} borderRadius={"full"} colorScheme={"teal"}>{make}</Badge>
-        <Badge mx="12px" px={"12px"} borderRadius={"full"} colorScheme={"teal"}>Year: {year}</Badge>
-        <Heading fontSize={"3xl"} marginBottom={"10px"} marginTop={"5px"}>{name}</Heading>
-        
-        
+        <Badge px={"12px"} borderRadius={"full"} colorScheme={"teal"}>
+          {make}
+        </Badge>
+        <Badge mx="12px" px={"12px"} borderRadius={"full"} colorScheme={"teal"}>
+          Year: {year}
+        </Badge>
+        <Heading fontSize={"3xl"} marginBottom={"10px"} marginTop={"5px"}>
+          {name}
+        </Heading>
+
         <hr></hr>
-        <Text marginTop={"6px"} >{smallDescription}</Text>
-       
+        <Text marginTop={"6px"}>{smallDescription}</Text>
+
         <Button
-        padding={"0px 10px 0px 12px "}
+          padding={"0px 10px 0px 12px "}
           transition={"all 0.3s ease-in-out"}
           mt={"12px"}
           bgColor={"primary"}
@@ -68,53 +72,69 @@ export default function CarCard({
           Read more
         </Button>
       </Box>
-      <Modal  blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
+      <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent marginBottom="6rem">
-          <ModalHeader fontSize={"3xl"} color={"primary"}>{name}</ModalHeader>
+          <ModalHeader fontSize={"3xl"} color={"primary"}>
+            {name}
+          </ModalHeader>
           <hr></hr>
-          
+
           <ModalBody marginTop={"10px"}>
-            
-            <Text color={"blackAlpha.800"}  mb="1rem">
+            <Text color={"blackAlpha.800"} mb="1rem">
               {bigDescription}
             </Text>
             <hr></hr>
-            <br/>
+            <br />
             <Text color={"blackAlpha.800"}>
-               <b>Year:</b> {year}
+              <b>Year:</b> {year}
             </Text>
             <Text color={"blackAlpha.800"}>
-                <b>Condition:</b> {condition}
+              <b>Condition:</b> {condition}
             </Text>
             <Text color={"blackAlpha.800"}>
-                <b>Miles</b> {miles} 
+              <b>Miles</b> {miles}
             </Text>
             <Text marginBottom={"10px"} color={"blackAlpha.800"}>
-                <b>Price:</b> ${price}
+              <b>Price:</b> ${price}
             </Text>
-            
+
             <hr></hr>
-            
-            <Image marginTop={"20px"} borderRadius={"20px"} src={image}/>
+
+            <Image
+              marginTop={"20px"}
+              borderRadius={"20px"}
+              src={image}
+              alt={"something"}
+            />
           </ModalBody>
 
           <ModalFooter>
-            <Button _hover={{
-            bgColor: "primary",
-            opacity: "0.79",
-            transform: "scale(0.95)",
-          }} bgColor={"primary"}
-          color={"textColor"} mr={3} onClick={onClose}>
+            <Button
+              _hover={{
+                bgColor: "primary",
+                opacity: "0.79",
+                transform: "scale(0.95)",
+              }}
+              bgColor={"primary"}
+              color={"textColor"}
+              mr={3}
+              onClick={onClose}
+            >
               Close
             </Button>
-            <Button _hover={{
-            bgColor: "primary",
-            opacity: "0.79",
-            transform: "scale(0.95)",
-          }} bgColor={"primary"}
-          color={"textColor"}>
-              <a href="./book" target="_blank" rel="noreferrer">Book an appointment to view the Car</a>
+            <Button
+              _hover={{
+                bgColor: "primary",
+                opacity: "0.79",
+                transform: "scale(0.95)",
+              }}
+              bgColor={"primary"}
+              color={"textColor"}
+            >
+              <a href="./book" target="_blank" rel="noreferrer">
+                Book an appointment to view the Car
+              </a>
             </Button>
           </ModalFooter>
         </ModalContent>

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -32,7 +32,6 @@ body {
 
 .nav-bar-container {
   padding: 30px 13% 0px 13%;
-  
 }
 .nav-links li {
   display: inline-block;
@@ -46,18 +45,34 @@ body {
 }
 .link-navs:hover {
   background-color: #6db8ba !important ;
-  
 }
-
 
 .hero-container {
   min-height: 80vh !important;
-  padding-top: 120px;
+  padding-top: 60px;
   flex-direction: column;
 }
 
+/* Make hero-container mobile responsive for iphone */
+@media screen and (max-width: 500px) {
+  .hero-container {
+    padding-top: 0px;
+  }
+}
+
+.hero-image {
+  filter: blur(4px);
+  background-image: url("/Dealership.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  position: relative;
+}
+
 .hero-gradient {
-  background: linear-gradient(90deg, #22c1c3 0%, #fdbb2d 100%);
+  background: linear-gradient(90deg, #02cfd3 10%, #f9af11 80%, #ffc64c 10%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -68,13 +83,64 @@ body {
   margin-top: 4rem;
   justify-content: center;
   display: flex;
-
 }
 
 .why {
-  background-color: linear-gradient(#FD7F2C, #FF6200) !important;
+  background: linear-gradient(45deg, rgb(0, 199, 199), #b5d5d5) !important;
 }
 
-.feature{
-  background-color: linear-gradient(#99d5d5, #4cb6b6)
+.why:nth-child(odd) {
+  background: linear-gradient(135deg, #f8cc48, #faab00) !important;
+}
+
+.feature {
+  background-color: linear-gradient(#99d5d5, #4cb6b6);
+}
+
+.underline {
+  position: relative;
+  text-decoration: none;
+}
+.underline::before {
+  content: " ";
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #02cfd3;
+  transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+.underline-two {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-two::before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 15px;
+  background-color: #f8cc48;
+  transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline-two:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }

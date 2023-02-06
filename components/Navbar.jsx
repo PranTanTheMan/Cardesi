@@ -18,27 +18,26 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  Image,
 } from "@chakra-ui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 
 export default function Navbar() {
-  const bg = useColorModeValue("white", "gray.800");
-  const text = useColorModeValue("black");
   const mobileNav = useDisclosure();
   const close = mobileNav.onClose;
   return (
     <>
       <chakra.header
-        bg={bg}
+        bg={"white"}
         w="full"
         px={{
           base: 2,
           sm: 4,
         }}
-        py={4}
+        py={1}
         shadow="md"
-        color={text}
+        color={"black"}
       >
         <Flex alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
@@ -46,77 +45,57 @@ export default function Navbar() {
               <VisuallyHidden>Cardesi.</VisuallyHidden>
             </chakra.a>
             <chakra.a href="/" title="Home" display="flex" alignItems="center">
-              <chakra.h1
-                color={text}
-                fontSize="xl"
-                fontWeight="medium"
-                ml={{ base: "0.8rem", md: "5rem" }}
-              >
-                Cardesi
-              </chakra.h1>
+              <Image
+                transition="all 0.2s ease-in-out"
+                src="/CarDesiLogo.png"
+                alt="Cardesi"
+                boxSize={"65px"}
+                ml={{ base: "0.8rem", md: "6.5rem" }}
+                _hover={{
+                  cursor: "pointer",
+                  transform: "scale(0.95)",
+                  transition: "all 0.2s ease-in-out",
+                }}
+              />
             </chakra.a>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
-            <HStack
-              spacing={1}
-              mr={1}
-              color="brand.500"
-              display={{
-                base: "none",
-                md: "inline-flex",
-              }}
-            >
-              <Link href="/">
-                <Button color={text} variant="ghost">
-                  Home
-                </Button>
-              </Link>
-              <Link href="salesreps">
-                <Button color={text} variant="ghost">
-                  Sales Reps
-                </Button>
-              </Link>
-              <Link href="browse">
-                <Button color={text} variant="ghost">
-                  Browse Cars
-                </Button>
-              </Link>
-              <Link href="loan">
-                <Button color={text} variant="ghost">
-                  Loan Estimator
-                </Button>
-              </Link>
-              <Link href="contact">
-                <Button color={text} variant="ghost">
-                  Contact
-                </Button>
-              </Link>
-            </HStack>
             <Link href="book">
-              <Button color={text} variant="ghost">
-                Book an Appointement
+              <Button
+                className="underline"
+                color={"black"}
+                variant="ghost"
+                fontSize={"18px"}
+                px={"0"}
+                mr={{ base: "0.8rem", md: "1.5rem" }}
+              >
+                Book an Appointment
               </Button>
             </Link>
             <Box
               display={{
                 base: "inline-flex",
-                md: "none",
+                md: "inline-flex",
               }}
             >
               <IconButton
                 display={{
                   base: "flex",
-                  md: "none",
+                  md: "flex",
                 }}
                 aria-label="Open menu"
-                fontSize="20px"
+                fontSize="24px"
                 color="gray.800"
-                _dark={{
-                  color: "inherit",
-                }}
                 variant="ghost"
                 icon={<AiOutlineMenu />}
                 onClick={mobileNav.onOpen}
+                mr={{ base: "0.8rem", md: "3.5rem" }}
+                ml={{ base: "0.8rem", md: "0.8rem" }}
+                _hover={{
+                  color: "primary",
+                  transition: "all 0.2s ease-in-out",
+                }}
+                transition="all 0.2s ease-in-out"
               />
 
               <Drawer
@@ -126,7 +105,7 @@ export default function Navbar() {
                 right={0}
                 p={2}
                 pb={4}
-                bg={bg}
+                bgColor={"white"}
                 rounded="sm"
                 shadow="sm"
                 size={"full"}
@@ -136,35 +115,105 @@ export default function Navbar() {
               >
                 <DrawerOverlay />
                 <DrawerContent>
-                  <DrawerCloseButton color={"black"} />
+                  <DrawerCloseButton
+                    color={"black"}
+                    pr={"25px"}
+                    pt={"40px"}
+                    size={"lg"}
+                    _hover={{
+                      color: "primary",
+                      transition: "all 0.2s ease-in-out",
+                    }}
+                  />
                   <DrawerBody
                     pt={"100px"}
                     display={"flex"}
                     flexDirection={"column"}
-                    gap={"15"}
+                    gap={{ base: "60px", md: "90px" }}
+                    bgColor={"white"}
                   >
                     <Link href="/">
-                      <Button color={text} variant="ghost" onClick={close}>
+                      <Button
+                        color={"primary"}
+                        variant="ghost"
+                        onClick={close}
+                        fontSize={{ base: "40px", md: "80px" }}
+                        fontWeight={"bold"}
+                        textShadow={"20px 15px 1px rgba(0, 0, 0, 0.07)"}
+                        _hover={{
+                          textShadow: "0px 0px 0px #c7d4ff10",
+                          cursor: "pointer",
+                        }}
+                        transition="all 0.2s ease-in-out"
+                      >
                         Home
                       </Button>
                     </Link>
                     <Link href="salesreps">
-                      <Button color={text} variant="ghost" onClick={close}>
+                      <Button
+                        color={"primary"}
+                        variant="ghost"
+                        onClick={close}
+                        fontSize={{ base: "40px", md: "80px" }}
+                        fontWeight={"bold"}
+                        textShadow={"20px 15px 1px rgba(0, 0, 0, 0.07)"}
+                        _hover={{
+                          textShadow: "0px 0px 0px #c7d4ff10",
+                          cursor: "pointer",
+                        }}
+                        transition="all 0.2s ease-in-out"
+                      >
                         Sales Reps
                       </Button>
                     </Link>
                     <Link href="browse">
-                      <Button color={text} variant="ghost" onClick={close}>
+                      <Button
+                        color={"primary"}
+                        variant="ghost"
+                        onClick={close}
+                        fontSize={{ base: "40px", md: "80px" }}
+                        fontWeight={"bold"}
+                        textShadow={"20px 15px 1px rgba(0, 0, 0, 0.07)"}
+                        _hover={{
+                          textShadow: "0px 0px 0px #c7d4ff10",
+                          cursor: "pointer",
+                        }}
+                        transition="all 0.2s ease-in-out"
+                      >
                         Browse Cars
                       </Button>
                     </Link>
                     <Link href="loan">
-                      <Button color={text} variant="ghost" onClick={close}>
+                      <Button
+                        color={"primary"}
+                        variant="ghost"
+                        onClick={close}
+                        fontSize={{ base: "40px", md: "80px" }}
+                        fontWeight={"bold"}
+                        textShadow={"20px 15px 1px rgba(0, 0, 0, 0.07)"}
+                        _hover={{
+                          textShadow: "0px 0px 0px #c7d4ff10",
+                          cursor: "pointer",
+                        }}
+                        transition="all 0.2s ease-in-out"
+                      >
                         Loan Estimator
                       </Button>
                     </Link>
                     <Link href="contact">
-                      <Button color={text} variant="ghost" onClick={close}>
+                      <Button
+                        color={"primary"}
+                        variant="ghost"
+                        onClick={close}
+                        fontSize={{ base: "40px", md: "80px" }}
+                        fontWeight={"bold"}
+                        textShadow={"20px 15px 1px rgba(0, 0, 0, 0.07)"}
+                        _hover={{
+                          textShadow: "0px 0px 0px #c7d4ff10",
+                          cursor: "pointer",
+                        }}
+                        transition="all 0.2s ease-in-out"
+                      >
                         Contact
                       </Button>
                     </Link>

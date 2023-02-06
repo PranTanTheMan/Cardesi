@@ -20,18 +20,16 @@ import {
 import { BsArrowRight } from "react-icons/bs";
 
 export default function Contact() {
-  const coolor = useColorModeValue("#6db8ba", "white");
-  const coolorDark = useColorModeValue("#116467", "white");
   const {
     isOpen: ContactSuccess,
     onClose,
     onOpen,
   } = useDisclosure({ defaultIsOpen: false });
   return ContactSuccess ? (
-    <Box h={"50vh"}>
+    <Box h={"51vh"}>
       <Alert
         borderRadius={"10px"}
-        margin="10rem auto"
+        margin={"200px auto"}
         status="success"
         width={"400px"}
       >
@@ -50,12 +48,8 @@ export default function Contact() {
     </Box>
   ) : (
     <>
-      <Flex margin={"2rem 2rem"} justifyContent={"center"} color={coolor}>
-        <Flex
-          direction={["column", "row"]}
-          marginTop="50px"
-          marginBottom="50px"
-        >
+      <Flex margin={"2rem 2rem"} justifyContent={"center"} color={"#6db8ba"}>
+        <Flex direction={["column", "row"]} marginTop="50px">
           <Box
             padding={"50px"}
             borderRadius={"20px"}
@@ -71,7 +65,7 @@ export default function Contact() {
               <Input
                 mb={"40px"}
                 _placeholder={{
-                  color: coolor,
+                  color: "#6db8ba",
                 }}
                 padding="0"
                 placeholder="EMAIL"
@@ -79,7 +73,7 @@ export default function Contact() {
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
-                borderBottomColor={coolorDark}
+                borderBottomColor={"#116467"}
                 _focus={{
                   "box-shadow": "none",
                 }}
@@ -88,14 +82,14 @@ export default function Contact() {
                 <Box>
                   <Input
                     _placeholder={{
-                      color: coolor,
+                      color: "#6db8ba",
                     }}
                     padding="0"
                     placeholder="FIRST NAME"
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
-                    borderBottomColor={coolorDark}
+                    borderBottomColor={"#116467"}
                     _focus={{
                       "box-shadow": "none",
                     }}
@@ -104,14 +98,14 @@ export default function Contact() {
                 <Box ml="20px">
                   <Input
                     _placeholder={{
-                      color: coolor,
+                      color: "#6db8ba",
                     }}
                     padding="0"
                     placeholder="LAST NAME"
                     border="none"
                     borderRadius="0px"
                     borderBottom="1px"
-                    borderBottomColor={coolorDark}
+                    borderBottomColor={"#116467"}
                     _focus={{
                       "box-shadow": "none",
                     }}
@@ -120,14 +114,14 @@ export default function Contact() {
               </Flex>
               <Textarea
                 _placeholder={{
-                  color: coolor,
+                  color: "#6db8ba",
                 }}
                 padding="0"
                 placeholder="MESSAGE"
                 border="none"
                 borderRadius="0px"
                 borderBottom="1px"
-                borderBottomColor={coolorDark}
+                borderBottomColor={"#116467"}
                 marginBottom="30px"
                 height="17vh"
                 _focus={{
@@ -136,7 +130,7 @@ export default function Contact() {
               />
 
               <Button
-                backgroundColor={coolor}
+                backgroundColor={"#6db8ba"}
                 borderRadius="full"
                 color={"black"}
                 px="10"

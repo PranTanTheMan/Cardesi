@@ -1,33 +1,52 @@
-import React from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Image,
-} from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Footer from "../components/footer";
+import React, { useState, useEffect } from "react";
+import { RingLoader } from "react-spinners";
 
-export default function loanEstimator() {
+const LazyIframe = ({ src }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
     <>
-      <div className="iframe">
-        <iframe
-          src="https://generaljubilantmicroscope.mrace.repl.co"
-          name="frame"
-          scrolling="no"
-          frameborder="1"
-          marginheight="0px"
-          marginwidth="0px"
-          height="800px"
-          width="1000px"
-        ></iframe>
-      </div>
-      <Footer />
+      {loading && (
+        <Flex
+          w={"100%"}
+          h={"100vh"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          id="loader"
+        >
+          <RingLoader color={"#6DB8BA"} loading={loading} size={150} />
+        </Flex>
+      )}
+      {!loading && (
+        <>
+          <div className="iframe">
+            <iframe
+              src={src}
+              name="frame"
+              frameborder="1"
+              scrolling="no"
+              marginheight="0px"
+              marginwidth="0px"
+              height="800px"
+              width="1000px"
+            ></iframe>
+          </div>
+
+          <Footer />
+        </>
+      )}
     </>
   );
+};
+
+export default function estimator() {
+  return <LazyIframe src="https://generaljubilantmicroscope.mrace.repl.co" />;
 }
