@@ -332,6 +332,8 @@ export default function Browse() {
           color={"black"}
           placeholder="Year"
         >
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
           <option value="2019">2019</option>
           <option value="2018">2018</option>
           <option value="2017">2017</option>
@@ -341,7 +343,6 @@ export default function Browse() {
           <option value="2013">2013</option>
           <option value="2012">2012</option>
           <option value="2011">2011</option>
-          <option value="2010">2010</option>
         </Select>
 
         <Select
@@ -354,7 +355,7 @@ export default function Browse() {
         >
           <option value="mint">Mint</option>
           <option value="excellent">Excellent</option>
-          <option value="food">Good</option>
+          <option value="good">Good</option>
           <option value="fair">Fair</option>
         </Select>
       </chakra.form>

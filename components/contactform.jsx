@@ -97,8 +97,9 @@ export default function Contact() {
         justifyContent={"center"}
         alignItems={"center"}
         flexWrap={"wrap"}
-        h={{ base: "70vh", md: "40vh" }}
-        gap={20}
+        // h={{ base: "90vh", md: "40vh" }}
+        padding={{ base: "35px", md: "50px" }}
+        gap={{ base: "35px", md: "50px" }}
       >
         <Flex
           flexDirection={"column"}
@@ -216,7 +217,7 @@ export default function Contact() {
                     bg="blue.800"
                     backgroundRepeat="no-repeat"
                     backgroundSize="cover"
-                    maxWidth="501px"
+                    width={{ base: "391px", md: "460px" }}
                   >
                     <Heading fontSize={"4xl"} mb={"30px"}>
                       Contact Cardesi
