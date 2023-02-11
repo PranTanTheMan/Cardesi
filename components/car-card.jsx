@@ -92,21 +92,21 @@ export default function CarCard({
           <hr></hr>
 
           <ModalBody marginTop={"10px"}>
-            <Text color={"white"} mb="1rem">
+            <Text color={"Black"} mb="1rem">
               {bigDescription}
             </Text>
             <hr></hr>
             <br />
-            <Text color={"white"}>
+            <Text color={"Black"}>
               <b>Year:</b> {year}
             </Text>
-            <Text color={"white"}>
+            <Text color={"Black"}>
               <b>Condition:</b> {condition}
             </Text>
-            <Text color={"white"}>
+            <Text color={"Black"}>
               <b>Miles</b> {miles}
             </Text>
-            <Text marginBottom={"10px"} color={"white"}>
+            <Text marginBottom={"10px"} color={"Black"}>
               <b>Price:</b> ${price}
             </Text>
 
