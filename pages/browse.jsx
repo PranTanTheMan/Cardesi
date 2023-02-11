@@ -311,6 +311,7 @@ export default function Browse() {
           <option value="dodge">Dodge</option>
           <option value="kia">Kia</option>
           <option value="hyundai">Hyundai</option>
+          <option value="toyota">Toyota</option>
         </Select>
         {/*  */}
         <Input
